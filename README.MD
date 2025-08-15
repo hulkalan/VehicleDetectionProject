@@ -62,20 +62,6 @@ VehicleDetectionProject/
    python download_models.py
    ```
 
-## 📝 Configuration
-
-Edit `config.py` to adjust:
-
-```python
-# Model settings
-VEHICLE_MODEL = 'yolov8s.pt'
-PLATE_MODEL   = 'keremberke/yolov5m-license-plate'
-VEHICLE_CONF  = 0.5
-PLATE_CONF    = 0.3
-
-# Tracking settings
-MAX_DISAPPEARED = 30
-MAX_DISTANCE    = 100
 
 # Video settings
 COUNT_LINE_RATIO = 0.6  # 60% down the frame
