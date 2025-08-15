@@ -1,3 +1,10 @@
+import torch
+import yolov5.models.yolo as yolo  # add this
+torch.serialization.add_safe_globals([yolo.DetectionModel])
+from VehicleDetectionProject.utils.helpers import assign_plate_to_vehicle, preprocess_plate_image, draw_text_with_background
+
+
+
 import cv2
 import numpy as np
 import easyocr
@@ -11,6 +18,7 @@ import os
 class VehiclePlateDetector:
     def __init__(self):
         # Initialize models
+
         print("Loading models...")
         self.vehicle_model = YOLO('yolov8s.pt')
 
